@@ -1,0 +1,147 @@
+/* pages/index/index.wxss */
+page {
+  background-color: #fcfcfc;
+}
+/* 头部搜索样式 */
+.head {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin: 0 auto;
+  height: 110rpx;
+  width: 95%;
+}
+.head .head_img {
+  width: 70rpx;
+  height: 70rpx;
+  border-radius: 50%;
+}
+.head input {
+  width: 580rpx;
+  height: 60rpx;
+  box-shadow: 5rpx 8rpx 8rpx #c4bebe;
+  border-radius: 50rpx; 
+  font-size: 28rpx;
+  text-align: center;
+}
+.head text {
+  position: absolute;
+  top: 40rpx;
+  left: 300rpx;
+  color: #989794;
+}
+/* 轮播导航样式 */
+.nav {
+  width: 100%;
+  height: 400rpx;
+}
+.nav_content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.nav_box {
+  margin: 10rpx 20rpx 0 20rpx;
+  width: 130rpx;
+  height: 170rpx;
+  text-align: center;
+  font-size: 26rpx;
+  color: #333333;
+}
+.nav .nav_img {
+  width: 120rpx;
+  height: 120rpx;
+}
+/* 中部活动栏样式 */
+.sell_bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  height: 160rpx;
+}
+.sell_bar view {
+  position: relative;
+  width: 140rpx;
+  height: 120rpx;
+  box-sizing: border-box;
+  padding-top: 24rpx;
+  text-align: center;
+  box-shadow: 10rpx 10rpx 10rpx #e6e6e6;
+  border-radius: 10rpx;
+  line-height: 30rpx;
+}
+.sell_bar .sell_title {
+  font-size: 28rpx;
+  color: #363636;
+}
+.sell_bar .sell_content {
+  font-size: 22rpx;
+  color: #999999;
+}
+.sell_bar .youxia {
+  position: absolute;
+  top:86rpx;
+  right: 5rpx;
+  color: #fc4235;
+  font-size: 34rpx;
+}
+.sell_bar .youshang {
+  position: absolute;
+  top: -5rpx;
+  right: 5rpx;
+  color: #fc4235;
+}
+/* 中部通知栏样式 */
+.notify {
+  display: flex;
+  margin: 0 auto;
+  width: 690rpx;
+  height: 120rpx;
+  box-shadow: 10rpx 10rpx 10rpx #e7e7e7;
+}
+.notify_img {
+  width: 120rpx;
+  height: 120rpx;
+  line-height: 120rpx;
+  text-align: center;
+  color: #ff433a;
+}
+.notify_img text {
+  font-size: 60rpx;
+}
+.notify_content {
+  box-sizing: border-box;
+  padding: 24rpx 10rpx 0 13rpx;
+  width: 570rpx;
+  height: 120rpx;
+  font-size: 24rpx;
+  color: #bcbcbc;
+}
+.tongzhi {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  height: 100%;
+  width: 100%;
+}
+.tongzhi .tubiao {
+  color: #ff7956;
+  margin-right: 20rpx;
+}
+.tongzhi .icon-gongxi{
+  font-size: 44rpx;
+  margin-right: 50rpx;
+}
+/* 广告图 */
+.guanggao {
+  margin: 30rpx auto;
+  width: 690rpx;
+}
+.guanggao image{
+  margin: 0 auto;
+  width: 690rpx;
+  height: 120rpx;
+  border-radius: 20rpx;
+}

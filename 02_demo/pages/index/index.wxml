@@ -1,0 +1,70 @@
+<!-- pages/index/index.wxml -->
+<view class="container">
+  <!-- 头部搜索 -->
+  <view class="head">
+    <image src="../../imgs/touxiang.jpg" class="head_img" />
+    <input type="text" placeholder="画册设计"/>
+    <text class="iconfont icon-sousuo head_search"></text>
+  </view>
+  <!-- 中部轮播导航 -->
+  <swiper class="nav" indicator-dots circula indicator-color="#ff3b37" indicator-active-color="#999999">
+    <block wx:for="{{navList}}" wx:key="{{navIndex}}" wx:for-item="nav" wx:for-index="navIndex">
+      <swiper-item >
+        <view class="nav_content">
+          <view class="nav_box" wx:for="{{nav}}" wx:key="{{index}}">
+            <image src="{{item.url}}" class="nav_img" />
+            <text >
+              {{item.name}}
+            </text>
+          </view>
+        </view>
+      </swiper-item>
+    </block>
+  </swiper>
+  <!-- 中部活动栏 -->
+  <view class="sell_bar">
+    <view>
+      <text class="sell_title">国庆活动\n</text>
+      <text class="sell_content">全场二折</text>
+      <text class="iconfont icon-guoqing- youxia"></text>
+    </view>
+    <view>
+      <text class="sell_title">人气设计\n</text>
+      <text class="sell_content">高人气设计</text>
+      <text class="iconfont icon-remen youxia"></text>
+    </view>
+    <view>
+      <text class="sell_title">活动专栏\n</text>
+      <text class="sell_content">精选活动</text>
+      <text class="iconfont icon-zhuanlan youxia"></text>
+    </view>
+    <view>
+      <text class="sell_title">每日福利\n</text>
+      <text class="sell_content">领优惠券</text>
+      <text class="iconfont icon-remen2 youshang"></text>
+      <text class="iconfont icon-xianjinfuli youxia"></text>
+    </view>
+  </view>
+  <!-- 中部消息通知栏 -->
+  <view class="notify">
+    <view class="notify_img">
+      <text class="iconfont icon-gonggao"></text>
+    </view>
+    <swiper class="notify_content" autoplay circular vertical>
+      <block wx:for="{{notifyList}}" wx:key="{{index}}">
+        <swiper-item class="tongzhi">
+          <text class="iconfont icon-message tubiao"></text>
+          <text class="notify_wenzi">{{item[0]}}\n</text>
+          <text class="iconfont icon-gongxi tubiao"></text>
+          <text class="notify_wenzi">{{item[1]}}\n</text>
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+  <!-- 广告消息 -->
+  <view class="guanggao">
+    <image src="../../imgs/guanggao.png"></image>
+  </view>
+  <!-- 下方详细内容 -->
+  
+</view>
