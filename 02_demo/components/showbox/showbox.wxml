@@ -1,0 +1,11 @@
+<!--components/showbox/showbox.wxml-->
+<!-- 首页下方展示商品的小模块 -->
+<view class="content_box">
+  <image class="content_header" src="{{item.url}}" mode="aspectFill"/>
+  <text class="contene_title">{{item.title}}</text>
+  <view class="content_footer">
+    <image class="user_img" src="/imgs/touxiang.jpg"/>
+    <text >{{item.name}}</text>
+    <text class="iconfont icon-zan"> 249</text>
+  </view>
+</view>

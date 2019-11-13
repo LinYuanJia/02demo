@@ -1,0 +1,36 @@
+/* components/showbox/showbox.wxss */
+@import "../../app.wxss";
+
+.content_box {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin: 6rpx;
+  width: 335rpx;
+  height: 604rpx;
+}
+.content_box .content_header {
+  width: 335rpx;
+  border-radius: 20rpx 20rpx 0 0;
+}
+.contene_title {
+  font-size: 28rpx;
+  color: #343434;
+  margin-left: 10rpx;
+}
+.content_footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 315rpx;
+  margin: 0 auto;
+}
+.content_footer .user_img {
+  width: 40rpx;
+  height: 40rpx;
+  border-radius: 50%;
+}
+.content_footer text{
+  font-size: 24rpx;
+  color: #484848;
+}

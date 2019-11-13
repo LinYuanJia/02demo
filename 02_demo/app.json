@@ -1,6 +1,9 @@
 {
   "pages": [
-    "pages/index/index"
+    "pages/index/index",
+    "pages/books/books",
+    "pages/cart/cart",
+    "pages/profile/profile"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -8,6 +11,43 @@
     "navigationBarTitleText": "WeChat",
     "navigationBarTextStyle": "black"
   },
+  "tabBar": {
+    "color": "#999999",
+    "selectedColor": "#ff3d38",
+    "position": "bottom",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "./imgs/index01.png",
+        "selectedIconPath": "./imgs/index.png"
+      },
+      {
+        "pagePath": "pages/books/books",
+        "text": "攻略",
+        "iconPath": "./imgs/books01.png",
+        "selectedIconPath": "./imgs/books.png"
+      },
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "./imgs/down_logo.png",
+        "selectedIconPath": "./imgs/down_logo.png"
+      },
+      {
+        "pagePath": "pages/cart/cart",
+        "text": "购物车",
+        "iconPath": "./imgs/cart01.png",
+        "selectedIconPath": "./imgs/cart.png"
+      },
+      {
+        "pagePath": "pages/profile/profile",
+        "text": "个人中心",
+        "iconPath": "./imgs/profile01.png",
+        "selectedIconPath": "./imgs/profile.png"
+      }
+    ]
+  },
+  
   "style": "v2",
   "sitemapLocation": "sitemap.json"
 }

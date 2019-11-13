@@ -1,4 +1,6 @@
 {
-  "usingComponents": {},
+  "usingComponents": {
+    "showbox": "/components/showbox/showbox"
+  },
   "navigationBarTitleText":"智汇蚁"
 }

@@ -136,7 +136,7 @@ page {
 }
 /* 广告图 */
 .guanggao {
-  margin: 30rpx auto;
+  margin: 30rpx auto 0;
   width: 690rpx;
 }
 .guanggao image{
@@ -144,4 +144,34 @@ page {
   width: 690rpx;
   height: 120rpx;
   border-radius: 20rpx;
+}
+/* 底部展示栏整体 */
+.foot {
+  width: 100%;
+}
+.foot_bar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 0 auto;
+  width: 95%;
+  height: 90rpx;
+}
+.footBar_box {
+  height: 40rpx;
+  font-size: 28rpx;
+  color: #686868;
+}
+.active {
+  font-size: 30rpx;
+  color: #ff433a;
+  border-bottom: 4rpx solid #ff433a;
+}
+.foot_content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: 0 auto;
+  width: 95%; 
+  height: 1100rpx;
 }

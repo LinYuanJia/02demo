@@ -1,0 +1,33 @@
+<!--pages/books/books.wxml-->
+<view class="container">
+  <!-- 头部搜索 -->
+  <view class="head">
+    <image src="../../imgs/touxiang.jpg" class="head_img" />
+    <input type="text" placeholder="画册设计"/>
+    <text class="iconfont icon-sousuo head_search"></text>
+  </view>
+  <!-- 导航菜单栏 -->
+  <view class="nav">
+    <block wx:for="{{navList}}" wx:key="{{index}}">
+      <view class="nav_box">
+        <image src="{{item.url}}" />
+        <text>{{item.name}}</text>
+      </view>
+    </block>
+  </view>
+  <!-- 中部详情展示大盒子 -->
+  <view class="body">
+    <view class="body_bar">
+      <scroll-view class="bar_slider" scroll-x>
+        <block wx:for="{{barList}}" wx:key="{{index}}">
+          <view class="bar_box"
+                data-index="{{index}}"
+                bind:tap="selectHandle">
+            <text class="{{currentIndex==index?'active':''}}">{{item}}</text>
+          </view>
+        </block> 
+      </scroll-view>
+    </view>
+    <view class="body_mai"></view>
+  </view>
+</view>

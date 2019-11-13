@@ -34,10 +34,59 @@ Page({
       nba:["baseline：项目的第一行文字的基线对齐","justify-content属性定义项目在主轴上的对齐方式"],
       cba:["space-between:两端对齐","space-around：每个项目两侧的间隔相等"],
       mba:["align-content属性定义了多根轴线的对齐方式","如果项目只有一根轴线，该属性不起作用"]
-    }
+    },
+    //底部导航栏三元判断的变量，selectHandle点击函数改变其值
+    currentIndex:0,
+    // 底部导航栏标题
+    titleData:["推荐","VI设计","LOGO设计","企业文化墙","画册设计"],
+    // 底部内容---变量控制bar显示
+    showIndex:"showData",
+    showTime:["showData","showData1","showData2","showData3"],
+    // 数据---图片等
+    showTotle:{
+      showData:{
+        1:{url:"../../imgs/goods/01.jpg",title:"古典风格 画册设计",name:"设计师老王"},
+        2:{url:"../../imgs/goods/02.jpg",title:"古典风格 画册设计",name:"设计师tony"},
+        3:{url:"../../imgs/goods/03.jpg",title:"古典风格 画册设计",name:"设计师小张"},
+        4:{url:"../../imgs/goods/04.jpg",title:"古典风格 画册设计",name:"设计师UZI"},
+        5:{url:"../../imgs/goods/05.jpg",title:"古典风格 画册设计",name:"设计师菜鸟"},
+        6:{url:"../../imgs/goods/got08.jpg",title:"古典风格 画册设计",name:"设计师哈哈哈"}
+      },
+      showData1:{
+        2:{url:"../../imgs/goods/tu02.jpg",title:"古典风格 画册设计",name:"设计师tony"},
+        3:{url:"../../imgs/goods/tu03.jpg",title:"古典风格 画册设计",name:"设计师小张"},
+        4:{url:"../../imgs/goods/tu04.jpg",title:"古典风格 画册设计",name:"设计师UZI"},
+        5:{url:"../../imgs/goods/tu01.jpg",title:"古典风格 画册设计",name:"设计师菜鸟"},
+      },
+      showData2:{
+        6:{url:"../../imgs/goods/got01.jpg",title:"古典风格 画册设计",name:"设计师小王"},
+        7:{url:"../../imgs/goods/got07.jpg",title:"古典风格 画册设计",name:"设计师小王"},
+        1:{url:"../../imgs/goods/got02.jpg",title:"古典风格 画册设计",name:"设计师小王"},
+        2:{url:"../../imgs/goods/got03.jpg",title:"古典风格 画册设计",name:"设计师小王"}
+      },
+      showData3:{
+        4:{url:"../../imgs/goods/got05.jpg",title:"古典风格 画册设计",name:"设计师小王"},
+        5:{url:"../../imgs/goods/got06.jpg",title:"古典风格 画册设计",name:"设计师小王"}
+      }
+    },
 
   },
 
+ /*  -------------事件监听函数 ------------*/
+
+  selectHandle(event){
+    let index = event.currentTarget.dataset.index
+    this.setData({
+      currentIndex: index,
+      showIndex: this.data.showTime[index]
+    })
+  },
+
+
+
+
+
+ /* --------------生命周期函数------------- */
   /**
    * 生命周期函数--监听页面加载
    */

@@ -66,5 +66,22 @@
     <image src="../../imgs/guanggao.png"></image>
   </view>
   <!-- 下方详细内容 -->
-  
+  <view class="foot">
+    <!-- foot_bar开始 -->
+    <view class="foot_bar">
+      <block wx:for="{{titleData}}" wx:key="{{index}}">
+        <view class="footBar_box {{currentIndex==index?'active':''}}"
+            data-index="{{index}}"
+            bind:tap="selectHandle">
+          <text>{{item}}</text>
+        </view>
+      </block>
+    </view>
+    <!-- foot_content开始 -->
+    <view class="foot_content">
+      <block wx:for="{{showTotle[showIndex]}}" wx:key="{{index}}">
+        <showbox item="{{item}}"></showbox>
+      </block>
+    </view>
+  </view>
 </view>
