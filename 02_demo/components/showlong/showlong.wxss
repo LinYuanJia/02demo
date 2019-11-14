@@ -1,0 +1,38 @@
+/* components/showbox2/showbox2.wxss */
+@import "../../app.wxss";
+.long_box {
+  display: flex;
+  margin: 10rpx 0;
+  width: 689rpx;
+  height: 180rpx;
+  background-color: #6e533e;
+  border-radius: 20rpx;
+}
+.box_left {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-sizing: border-box;
+  padding: 20rpx;
+  width: 429rpx;
+  height: 180rpx;
+  color: #e3deda;
+}
+.box_right {
+  width: 260rpx;
+  height: 180rpx;
+  border-radius: 0 20rpx 20rpx 0;
+}
+.lefe_bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.lefe_bottom text {
+  font-size: 22rpx;
+}
+.touxiang {
+  width: 40rpx;
+  height: 40rpx;
+  border-radius: 50%;
+}

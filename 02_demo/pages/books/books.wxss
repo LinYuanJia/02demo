@@ -54,7 +54,7 @@ page {
 /* 下方展示盒，切换栏样式 */
 .body_bar {
   margin: 0 auto;
-  width: 100%;
+  width: 90%;
   height: 80rpx;
 }
 .bar_slider {
@@ -63,7 +63,6 @@ page {
 }
 .bar_box {
   display: inline-block;
-  width: 160rpx;
   height: 80rpx;
   font-size: 28rpx;
   color: #666666;
@@ -81,4 +80,9 @@ page {
   font-size: 30rpx;
   background-color: #fa3b3b;
   color: #fcfcfc;
+}
+/* 下方展示盒，盒内样式 */
+.body_mai {
+  margin: 0 auto;
+  width: 90%;
 }

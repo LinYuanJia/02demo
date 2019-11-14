@@ -1,1 +1,77 @@
 /* pages/profile/profile.wxss */
+page {
+  background-color: #f9f9f9;
+}
+/* 个人中心头部样式 */
+.profile_head {
+  position: relative;
+  width: 100%;
+}
+.head_bg {
+  width: 100%;
+  height: 300rpx;
+}
+.head_user {
+  position: absolute;
+  top: 52rpx;
+  left: 58rpx;
+  width: 136rpx;
+  height: 136rpx;
+  border-radius: 50%;
+}
+.profile_head button {
+  position: absolute;
+  top: 66rpx;
+  left: 221rpx;
+  margin: 0;
+  padding: 0;
+  background-color: #fe7154;
+  font-size: 28rpx;
+  color: #fff;
+  font-weight: normal;
+  width: 140rpx;
+  min-height: 14rpx;
+}
+/* 中间导航栏样式 */
+.profile_nav {
+  display: flex;
+  justify-content: space-around;
+  margin: 0 auto;
+  width: 690rpx;
+  height: 120rpx;
+}
+.nav_box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  font-size: 20rpx;
+  color: #8f8f8f; 
+}
+.nav_img {
+  width: 48rpx;
+  height: 45rpx;
+}
+/* 下方列表样式 */
+.profile_list {
+  margin-top: 20rpx;
+  width: 100%;
+}
+.list_box {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  height: 95rpx;
+}
+.list_text {
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  font-size: 28rpx;
+  color: #3a3a3a;
+}
+.list_img {
+  width: 90rpx;
+  height: 95rpx;
+}

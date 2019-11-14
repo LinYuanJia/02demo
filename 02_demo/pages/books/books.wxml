@@ -17,6 +17,7 @@
   </view>
   <!-- 中部详情展示大盒子 -->
   <view class="body">
+    <!-- 切换菜单 -->
     <view class="body_bar">
       <scroll-view class="bar_slider" scroll-x>
         <block wx:for="{{barList}}" wx:key="{{index}}">
@@ -28,6 +29,11 @@
         </block> 
       </scroll-view>
     </view>
-    <view class="body_mai"></view>
+    <!-- 展示内容 -->
+    <view class="body_mai">
+      <block wx:for="{{4}}" wx:key="{{index}}">
+        <showlong />
+      </block>
+    </view>
   </view>
 </view>

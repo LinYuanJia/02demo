@@ -1,2 +1,30 @@
 <!--pages/profile/profile.wxml-->
-<text>pages/profile/profile.wxml</text>
+<view class="container">
+  <!-- 个人中心头部 -->
+  <view class="profile_head">
+    <image class="head_bg" src="/imgs/profile_bg.png" />
+    <image class="head_user" src="/imgs/touxiang.jpg" />
+    <button open-type="getUserInfo" class="getInfo_btn">点击登录</button>
+  </view>
+  <!-- 个人中心导航切换栏 -->
+  <view class="profile_nav">
+    <block wx:for="{{navData}}">
+      <view class="nav_box">
+        <image class="nav_img" src="{{item.url}}" />
+        <text>{{item.title}}</text>
+      </view>
+    </block>
+  </view>
+  <!-- 个人中心列表 -->
+  <view class="profile_list">
+    <block wx:for="{{listData}}" wx:key="{{index}}">
+      <view class="list_box">
+        <image class="list_img" src="{{item.url}}" />
+        <view class="list_text">
+          <text>{{item.name}}</text>
+          <text class="iconfont icon-jiantouzuo" />
+        </view>
+      </view>
+    </block>
+  </view>
+</view>

@@ -1,4 +1,6 @@
 {
-  "usingComponents": {},
+  "usingComponents": {
+    "showlong":"../../components/showlong/showlong"
+  },
   "navigationBarTitleText":"攻略"
 }

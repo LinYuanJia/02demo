@@ -1,0 +1,14 @@
+<!--components/showbox2/showbox2.wxml-->
+<view class="long_box">
+  <view class="box_left">
+    <view class="left_top">古典风格 画册设计</view>
+    <view class="lefe_bottom">
+      <image class="touxiang" src="/imgs/touxiang.jpg"/>
+      <text>设计界的菜鸟</text>
+      <text>浏览 125</text>
+      <text class="iconfont icon-zan">249</text>
+    </view>
+  </view>
+  <image class="box_right" src="/imgs/goods/01.jpg" />
+</view>
+

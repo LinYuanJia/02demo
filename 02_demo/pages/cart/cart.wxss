@@ -1,1 +1,130 @@
 /* pages/cart/cart.wxss */
+/* 购物车盒子样式 */
+.cart {
+  width: 100%;
+  height: 700rpx;
+  border-bottom: 1rpx solid #d4d4d4;
+}
+.cart_box {
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 10rpx auto;
+  padding: 20rpx;
+  width: 690rpx;
+  height: 224rpx;
+  border-bottom: 1rpx solid #b4b4b4;
+}
+checkbox .wx-checkbox-input{
+  width: 30rpx;
+  height: 30rpx;
+  border-radius: 50%;
+}
+checkbox .wx-checkbox-input.wx-checkbox-input-checked {
+  background: #ff4f41;
+}
+checkbox .wx-checkbox-input.wx-checkbox-input-checked::before {
+  color: aliceblue;
+}
+#cart_img {
+  width: 184rpx;
+  height: 184rpx;
+  border-radius: 10rpx;
+}
+.cart_content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 60%;
+  height: 184rpx;
+}
+.content_title {
+  font-size: 28rpx;
+  color: #333333;
+}
+.icon_color {
+  color: #ff4f41;
+}
+.content_description {
+  font-size: 22rpx;
+  color: #9d9d9d;
+}
+#description1, #description2 {
+  display: inline-block;
+  width: 128rpx;
+  height: 30rpx;
+  border: 1rpx solid #9d9d9d;
+  border-radius: 5rpx;
+  line-height: 30rpx;
+  text-align: center;
+  margin: 5rpx;
+}
+.content_number {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  text-align: center;
+  width: 160rpx;
+  height: 40rpx;
+}
+#aaaa,#bbbb,#cccc {
+  display: inline-block;
+  font-size: 24rpx;
+  color: #a4a4a4;
+  width: 40rpx;
+  height: 35rpx;
+  border: 1rpx solid #eeeeee;
+}
+/* 底部的结算按钮样式 */
+.totle {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 80rpx;
+  font-size: 24rpx;
+  color: #9b9b9b;
+  border-top: 1rpx solid #d4d4d4;
+  background-color: #fff;
+}
+.checkboxOut {
+  width: 30%;
+}
+.totle button {
+  margin: 0;
+  padding: 0;
+  width: 130rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  font-size: 24rpx;
+  font-weight: bold;
+  color: #ffffff;
+  background-color: #ff4f41;
+  border-radius: 40rpx;
+}
+/* 下方推荐内容样式 */
+.sell {
+  width: 100%;
+}
+#sell_img {
+  display: block;
+  margin: 20rpx auto;
+  width: 332rpx;
+  height: 29rpx;
+}
+.sell_body {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: 0 auto;
+  width: 95%; 
+}
+.tempbox {
+  width: 100%;
+  height: 80rpx;
+}

@@ -1,0 +1,31 @@
+/* components/buydetail/buydetail.wxss */
+@import "../../app.wxss";
+.cart_content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 60%;
+  height: 184rpx;
+}
+.content_title {
+  font-size: 28rpx;
+  color: #333333;
+}
+.icon_color {
+  color: #ff4f41;
+}
+.content_description {
+  font-size: 22rpx;
+  color: #9d9d9d;
+}
+.content_description text {
+  display: inline-block;
+  width: 128rpx;
+  height: 30rpx;
+  border: 1rpx solid #9d9d9d;
+  border-radius: 5rpx;
+  line-height: 30rpx;
+  text-align: center;
+  margin: 5rpx;
+}
