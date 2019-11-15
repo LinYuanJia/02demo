@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "buydetail":"../../../components/buydetail/buydetail"
+  },
+  "navigationBarTitleText":"设计详情"
+}

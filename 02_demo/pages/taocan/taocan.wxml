@@ -1,0 +1,15 @@
+<!--pages/taocan/taocan.wxml-->
+<view class="container">
+  <!-- 头部切换栏 -->
+  <view class="hesd_bar">
+    <block wx:for="{{barData}}" wx:key="{{index}}">
+      <view class="bar_box {{currentIndex==index?'active':''}}"
+            data-index="{{index}}"
+            bindtap="selectIndex">{{item}}</view>
+    </block>
+  </view>
+  <!-- 下方商品详情展示 -->
+  <view class="body">
+    <image class="body_img" src="../../imgs/tancan.png" mode="widthFix" />
+  </view>
+</view>

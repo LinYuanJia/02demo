@@ -23,7 +23,7 @@
   </swiper>
   <!-- 中部活动栏 -->
   <view class="sell_bar">
-    <view>
+    <view bindtap="toTaocan">
       <text class="sell_title">国庆活动\n</text>
       <text class="sell_content">全场二折</text>
       <text class="iconfont icon-guoqing- youxia"></text>

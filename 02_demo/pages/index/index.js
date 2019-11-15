@@ -74,6 +74,7 @@ Page({
 
  /*  -------------事件监听函数 ------------*/
 
+  /* 监听下方切换栏index，改变选中样式 */
   selectHandle(event){
     let index = event.currentTarget.dataset.index
     this.setData({
@@ -82,6 +83,15 @@ Page({
     })
   },
 
+ /* 监听国庆活动点击跳转 */
+  toTaocan(){
+    wx.navigateTo({
+      url: '../taocan/taocan',
+      success: (result)=>{
+        
+      }
+    });
+  },
 
 
 

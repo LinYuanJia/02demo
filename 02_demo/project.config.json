@@ -48,7 +48,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 2,
+			"current": 3,
 			"list": [
 				{
 					"id": -1,
@@ -68,6 +68,14 @@
 					"id": -1,
 					"name": "个人中心",
 					"pathName": "pages/profile/profile",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "商品详情",
+					"pathName": "pages/design/design_detail/design_detail",
+					"query": "",
 					"scene": null
 				}
 			]

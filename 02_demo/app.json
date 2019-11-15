@@ -3,7 +3,10 @@
     "pages/index/index",
     "pages/books/books",
     "pages/cart/cart",
-    "pages/profile/profile"
+    "pages/profile/profile",
+    "pages/taocan/taocan",
+    "pages/design/design_detail/design_detail",
+    "pages/design/design_agree/design_agree"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -47,7 +50,6 @@
       }
     ]
   },
-  
   "style": "v2",
   "sitemapLocation": "sitemap.json"
 }

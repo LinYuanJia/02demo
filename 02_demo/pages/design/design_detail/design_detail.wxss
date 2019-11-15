@@ -1,0 +1,205 @@
+/* pages/design/design_detail/design_detail.wxss */
+/* 头部切换栏样式 */
+page {
+  background-color: #f9f9f9;
+}
+.head_bar {
+  white-space: nowrap;
+  width: 750rpx;
+  height: 80rpx;
+}
+.bar_box {
+  display: inline-block;
+  height: 74rpx;
+  line-height: 74rpx;
+  padding: 0 20rpx;
+  font-size: 28rpx;
+  color: #666666;
+}
+.active {
+  font-size: 30rpx;
+  color: #333333;
+  border-bottom: 4rpx solid #ff3635;
+}
+/* 轮播图样式 */
+.swiper {
+  width: 100%;
+  height: 480rpx;
+}
+.nav_img {
+  width: 100%;
+  height: 480rpx;
+}
+/* 商品详细信息样式 */
+.goods {
+  position: relative;
+  box-sizing: border-box;
+  padding: 30rpx;
+  width: 100%;
+  height: 280rpx;
+}
+.lingquan {
+ width: 100%;
+ text-align: right;
+ font-size: 28rpx;
+ color: #a7a7a7;
+}
+.goods_zan {
+  position: absolute;
+  bottom: 30rpx;
+  right: 60rpx;
+}
+#zan {
+  font-size: 26rpx;
+  color: #454545;
+}
+/* 中部购买填写的信息样式 */
+.body {
+  box-sizing: border-box;
+  padding: 0 30rpx;
+  width: 750rpx;
+}
+.guige,.Pshu,.tel,.mianze,.fapiao {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 80rpx;
+  font-size: 28rpx;
+  color: #333333;
+}
+.guige_show {
+  display: flex;
+  justify-content: space-between;
+  width: 400rpx;
+  font-size: 24rpx;
+  color: #747474;
+}
+.zhiyi {
+  width: 100%;
+  height: 40rpx;
+  font-size: 24rpx;
+  color: #787878;
+}
+#tanhao {
+  color: #ff4d40;
+}
+.mianze_detail {
+  margin-right: 160rpx;
+  font-size: 24rpx;
+  color: #666666;
+}
+.beizhu {
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 260rpx;
+  font-size: 28rpx;
+  color: #333333;
+}
+#bz_content {
+  box-sizing: border-box;
+  padding: 10rpx 0 0 20rpx;
+  width: 620rpx;
+  height: 260rpx;
+}
+/* 上传图片button样式 */
+.upload_img {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 100rpx;
+  height: 100rpx;
+  font-size: 22rpx;
+  color: #6c6c6c;
+}
+.upload_img .tupian {
+  width: 68rpx;
+  height: 68rpx;
+}
+/* 底部购买按钮样式 */
+.bottom_btn {
+  display: flex;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 750rpx;
+  height: 100rpx;
+  background-color: #ffffff;
+}
+.img_box {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 280rpx;
+  height: 100rpx;
+}
+.btn_img {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  font-size: 24rpx;
+  color: #464646;
+}
+.btn_img .tubiao {
+  width: 48rpx;
+  height: 48rpx;
+}
+/* 购买----右边按钮样式，上面为左边图标样式 */
+.btn_box {
+  display: flex;
+  align-items: center;
+  width: 470rpx;
+  height: 100rpx;
+}
+.btn_left,.btn_right {
+  padding: 0;
+  width: 220rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  font-size: 28rpx;
+  color: #ffffff;
+}
+.btn_left {
+  background-color: #f8c43d;
+  border-radius: 50rpx 0 0 50rpx;
+}
+.btn_right {
+  background-color: #ff4d41;
+  border-radius: 0 50rpx 50rpx 0;
+}
+/* 尾部商品详情展示样式 */
+.footer {
+  width: 100%;
+  height: 1500rpx;
+}
+.foot_bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  height: 80rpx;
+}
+.footBar_box {
+  width: 140rpx;
+  height: 74rpx;
+  line-height: 74rpx;
+  text-align: center;
+  font-size: 28rpx;
+  color: #333333;
+}
+.select {
+  color: #ff4d40;
+  border-bottom: 3rpx solid #ff4d40;
+}
+.foot_content {
+  width: 100%;
+}
+.foot_show {
+  width: 100%;
+}
