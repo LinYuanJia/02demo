@@ -1,0 +1,9 @@
+<!--components/tabbar/tabbar.wxml-->
+<view class="head">
+  <block wx:for="{{barList}}" wx:key="{{index}}">
+    <view class="bar_box {{currentIndex==index?'active':''}}"
+          bindtap="selectHandle" data-index="{{index}}">
+      {{item}}
+    </view>
+  </block>
+</view>

@@ -7,11 +7,12 @@
     <text class="iconfont icon-sousuo head_search"></text>
   </view>
   <!-- 中部轮播导航 -->
-  <swiper class="nav" indicator-dots circula indicator-color="#ff3b37" indicator-active-color="#999999">
+  <swiper class="nav" indicator-dots circula indicator-color="#999999" indicator-active-color="#ff3b37">
     <block wx:for="{{navList}}" wx:key="{{navIndex}}" wx:for-item="nav" wx:for-index="navIndex">
       <swiper-item >
         <view class="nav_content">
-          <view class="nav_box" wx:for="{{nav}}" wx:key="{{index}}">
+          <view class="nav_box" wx:for="{{nav}}" wx:key="{{index}}"
+                                bindtap="chooseDesign" data-index="{{index}}">
             <image src="{{item.url}}" class="nav_img" />
             <text >
               {{item.name}}

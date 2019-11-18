@@ -1,0 +1,50 @@
+/* pages/profile_content/fenxiao/fenxiao.wxss */
+/* 上方头部样式 */
+.head {
+  position: relative;
+  width: 100%;
+  height: 370rpx;
+}
+.head_img {
+  width: 100%;
+  height: 100%;
+}
+.head_content {
+  position: absolute;
+  top: 80rpx;
+  left: 30rpx;
+  color: #ffffff;
+}
+.head_a {
+  font-size: 36rpx;
+}
+.head_b {
+  font-size: 60rpx;
+}
+.head_content .head_btn {
+  width: 150rpx;
+  margin-top: 10rpx;
+  color: #ff3533;
+}
+/* 下方列表样式 */
+.fenxiao_list {
+  width: 100%;
+}
+.list_box {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  height: 95rpx;
+}
+.list_text {
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  font-size: 28rpx;
+  color: #3a3a3a;
+}
+.list_img {
+  width: 80rpx;
+  height: 80rpx;
+}

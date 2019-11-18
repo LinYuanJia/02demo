@@ -19,9 +19,36 @@ Page({
        3:{url:"/imgs/profile/fapiao.png",name:"我的发票"},
        4:{url:"/imgs/profile/shoucang.png",name:"我的收藏"},
        5:{url:"/imgs/profile/fankui.png",name:"意见反馈"}
-     }
+     },
+     /* 详细列表跳转地址 */
+     listUrl:["/pages/profile_content/fenxiao/fenxiao",
+              "/pages/profile_content/youhui/youhui",
+              "/pages/profile_content/fapiao/fapiao",
+              "/pages/profile_content/shoucang/shoucang",
+              "/pages/profile_content/fankui/fabkui"]
 
   },
+
+  /* ---------------------事件监听函数 ---------------------*/
+  /* 页面跳转订单 */
+  toDingdan(event){
+    const index = event.currentTarget.dataset.index-1
+    wx.navigateTo({
+      url:"../profile_content/dingdan/dingdan"
+    })
+  },
+   /* 下方列表---页面跳转 */
+  toTotelList(event){
+    const index = event.currentTarget.dataset.index-1
+    const url = this.data.listUrl[index]
+    wx.navigateTo({
+      url
+    })
+  },
+
+
+
+  /* ---------------------生命周期函数 ---------------------*/
 
   /**
    * 生命周期函数--监听页面加载

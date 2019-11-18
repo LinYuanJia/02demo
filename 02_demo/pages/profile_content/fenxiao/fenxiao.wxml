@@ -1,0 +1,25 @@
+<!--pages/profile_content/fenxiao/fenxiao.wxml-->
+<view class="container">
+  <!-- 头部信息 -->
+  <view class="head">
+    <image class="head_img" src="/imgs/fenxiao/fenxiao.png" mode="widthFix" />
+    <view class="head_content">
+      <text class="head_a">分销佣金\n</text>
+      <text class="head_b">¥{{563.23}}\n</text>
+      <button size="mini" class="head_btn">提现</button>
+    </view>
+  </view>
+  <!-- 列表信息 -->
+  <view class="fenxiao_list">
+    <block wx:for="{{listData}}" wx:key="{{index}}">
+      <view class="list_box" bindtap="{{totleFun[index-1]}}">
+        <image class="list_img" src="{{item.url}}" />
+        <view class="list_text">
+          <text>{{item.name}}</text>
+          <text class="iconfont icon-jiantouzuo" />
+        </view>
+      </view>
+    </block>
+  </view>
+
+</view>

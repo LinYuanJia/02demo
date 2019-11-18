@@ -1,0 +1,19 @@
+/* components/tabbar/tabbar.wxss */
+.head {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 750rpx;
+  height: 80rpx;
+  font-size: 28rpx;
+  color: #3c3c3c;
+}
+.bar_box {
+  height: 74rpx;
+  line-height: 74rpx;
+  padding: 0 10rpx;
+}
+.active {
+  color: #ff7152;
+  border-bottom: 4rpx solid #ff7152;
+}

@@ -22,6 +22,12 @@ Page({
       3:{url:"/imgs/btn/btn_kefu.png",name:"客服"}
 
     },
+    mianzeData:{
+      1:{title:"假一赔十",content:"正品保证，假一赔十"},
+      2:{title:"七天无理由",content:"收到货物后，七天无理由退款"}
+    },
+    // 免责声明弹窗flag控制
+    mianzeFlag:true,
 
 
     //尾部切换栏标题数据
@@ -47,7 +53,9 @@ Page({
   },
   //免责声明弹出框
   mianzeHandle(){
-    
+    this.setData({
+      mianzeFlag:!this.data.mianzeFlag
+    })
   },
   // 底部购买按钮提交
   formSubmit(event){
@@ -72,7 +80,11 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    //设置切换栏和首页点击的模块一致
+    const index = options.index-1
+    this.setData({
+      currentIndex: index
+    })
   },
 
   /**

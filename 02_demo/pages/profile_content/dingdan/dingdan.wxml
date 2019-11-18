@@ -1,0 +1,20 @@
+<!--pages/profile_content/dingdan/dingdan.wxml-->
+<view class="container">
+  <!-- 头部切换栏 -->
+  <tabbar barList="{{barList}}" bind:indexChange="indexChange"></tabbar>
+  <view class="body">
+    <block wx:for="{{5}}" wx:key="{{index}}">
+      <view class="main_box">
+        <view>订单编号：{{1111111111}}</view>
+        <view class="content_middle">
+          <image class="box_img" src="/imgs/goods/got03.jpg" mode="aspectFill" />
+          <buydetail></buydetail>
+        </view>
+        <view class="content_bottom">
+          <button class="del">删除订单</button>
+          <button class="pay">去付款</button>
+        </view>
+      </view>
+    </block>
+  </view>
+</view>

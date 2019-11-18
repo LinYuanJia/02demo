@@ -1,0 +1,15 @@
+/* pages/profile_content/fenxiao/tuiguang/tuiguang.wxss */
+.container {
+  position: relative;
+  width: 100%;
+  height: 1175rpx;
+}
+.fenxiao_img {
+  display: block;
+  margin: 30rpx auto;
+}
+.fenxiao_btn {
+  position: absolute;
+  bottom: 120rpx;
+  left: 200rpx;
+}

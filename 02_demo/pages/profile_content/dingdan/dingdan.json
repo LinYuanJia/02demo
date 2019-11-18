@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "tabbar":"../../../components/tabbar/tabbar",
+    "buydetail":"../../../components/buydetail/buydetail"
+  },
+  "navigationBarTitleText":"我的订单"
+}

@@ -61,6 +61,22 @@
           <text class="mianze_detail">假一赔十.正品保证.即速退款</text>
           <text class="iconfont icon-jiantouzuo"/>
         </view>
+        <!-- 免责声明弹窗 -->
+        <view class="mianze_box" hidden="{{mianzeFlag}}">
+          <view class="mianze_content">
+            免责声明
+            <block wx:for="{{mianzeData}}" wx:key="{{index}}">
+              <view class="mianze_textbox">
+                <image class="mianze_img" src="/imgs/mianze_gou.png" />
+                <view class="text_ab">
+                  <text class="text_a">{{item.title}}\n</text>
+                  <text class="text_b">{{item.content}}</text>
+                </view>
+              </view>
+            </block> 
+          </view>
+          <button class="mianze_btn" bindtap="mianzeHandle">取消</button>
+        </view>
       </view>
       <!-- 发票开具 -->
       <view class="fapiao">
@@ -70,9 +86,10 @@
       <!-- 备注 -->
       <view class="beizhu">
         备注
-        <textarea id="bz_content" name="beizhu" focus="{{true}}" maxlength="140"
+        <textarea id="bz_content" name="beizhu" maxlength="140"
                   placeholder="请填写颜色需求，涉及元素等，或上传喜欢的样式图片"
-                  placeholder-style="color:#747474;font-size:24rpx"/>
+                  placeholder-style="color:#747474;font-size:24rpx"
+                  wx:if="{{mianzeFlag}}"/>
         <view class="upload_img">
           <image class="tupian" src="/imgs/upload.png" />
           <text>图片上传</text>

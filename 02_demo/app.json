@@ -6,7 +6,14 @@
     "pages/profile/profile",
     "pages/taocan/taocan",
     "pages/design/design_detail/design_detail",
-    "pages/design/design_agree/design_agree"
+    "pages/design/design_agree/design_agree",
+    "pages/profile_content/fankui/fabkui",
+    "pages/profile_content/shoucang/shoucang",
+    "pages/profile_content/fenxiao/fenxiao",
+    "pages/profile_content/youhui/youhui",
+    "pages/profile_content/fapiao/fapiao",
+    "pages/profile_content/fenxiao/tuiguang/tuiguang",
+    "pages/profile_content/dingdan/dingdan"
   ],
   "window": {
     "backgroundTextStyle": "light",

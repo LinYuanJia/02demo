@@ -1,0 +1,5 @@
+<!--pages/profile_content/fenxiao/tuiguang/tuiguang.wxml-->
+<view class="container">
+  <image class="fenxiao_img" src="/imgs/fenxiao/tuiguang.png" mode="widthFix" />
+  <button class="fenxiao_btn">保存到相册</button>
+</view>

@@ -27,7 +27,6 @@ Page({
         8:{url:"../../imgs/more.png",name:"更多"}
       }
     },
-
     // 中部通知content的数据
     notifyList: {
       abc:["1333****333用户购买logo一件.....","1333****333升级为 VIP 2级....."],
@@ -80,6 +79,14 @@ Page({
     this.setData({
       currentIndex: index,
       showIndex: this.data.showTime[index]
+    })
+  },
+  //监听轮播导航的点击跳转页面
+  chooseDesign(event){
+    const index = event.currentTarget.dataset.index
+    console.log(index)
+    wx.navigateTo({
+      url:"../design/design_detail/design_detail?index="+`${index}`
     })
   },
 
