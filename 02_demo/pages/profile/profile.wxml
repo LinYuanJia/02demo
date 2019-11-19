@@ -3,8 +3,9 @@
   <!-- 个人中心头部 -->
   <view class="profile_head">
     <image class="head_bg" src="/imgs/profile_bg.png" />
-    <image class="head_user" src="/imgs/touxiang.jpg" />
-    <button open-type="getUserInfo" class="getInfo_btn">点击登录</button>
+    <image class="head_user" src="{{userInfo.avatarUrl}}" />
+    <button open-type="getUserInfo" class="getInfo_btn"
+            bindgetuserinfo="getUserInfo">{{userInfo.nickName}}</button>
   </view>
   <!-- 个人中心导航切换栏 -->
   <view class="profile_nav">

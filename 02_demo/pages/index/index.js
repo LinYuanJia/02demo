@@ -1,4 +1,7 @@
 // pages/index/index.js
+
+import request from "../../service/request"
+
 Page({
   /**
    * 页面的初始数据
@@ -99,6 +102,28 @@ Page({
       }
     });
   },
+  /* 登陆函数的抽取 */
+  _login(){
+    wx.login({
+      success: res=> {
+        const code = res.code;
+        request({
+          url: "/user/login",
+          method: 'post',
+          data: {
+            code,
+          }
+        }).then(res=>{
+          console.log(res)
+          const data = res.data.data.apitoken.token
+          wx.setStorage({
+            key: 'TOKEN',
+            data: data
+          })
+        })
+      }
+    })
+  },
 
 
 
@@ -108,7 +133,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    this._login();
   },
 
   /**

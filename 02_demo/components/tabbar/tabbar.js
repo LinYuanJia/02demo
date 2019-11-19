@@ -5,15 +5,17 @@ Component({
    */
   properties: {
     barList:{
-      type:Array
-    }
+      type: Array
+    },
+    /* currentIndex: {
+      type: Number
+    } */
   },
-
   /**
    * 组件的初始数据
    */
   data: {
-    currentIndex:0,
+    currentIndex: 0
   },
 
   /**

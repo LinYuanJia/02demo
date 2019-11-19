@@ -7,6 +7,7 @@ Page({
   data: {
     /* 切换栏title数据 */
     barList:["全部订单","待付款","可使用","退款/售后"],
+    currenIndex: 0
 
   },
 
@@ -24,7 +25,10 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    const index = options.index
+    this.setData({
+      currenIndex: index
+    })
   },
 
   /**

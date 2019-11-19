@@ -1,10 +1,17 @@
 // pages/profile/profile.js
+import request from "../../service/request"
+
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
+    /* 用户信息保存 */
+      userInfo:{
+        nickName:"点击登录",
+        avatarUrl:"/imgs/touxiang.jpg"
+      },
      /* 导航栏图标数据 */
      navData:{
        1:{url:"/imgs/profile/dingdan.png",title:"全部订单"},
@@ -34,7 +41,7 @@ Page({
   toDingdan(event){
     const index = event.currentTarget.dataset.index-1
     wx.navigateTo({
-      url:"../profile_content/dingdan/dingdan"
+      url:"../profile_content/dingdan/dingdan?index="+`${index}`
     })
   },
    /* 下方列表---页面跳转 */
@@ -43,6 +50,14 @@ Page({
     const url = this.data.listUrl[index]
     wx.navigateTo({
       url
+    })
+  },
+  /* 获取用户信息并展示 */
+  getUserInfo(event){
+    console.log(event)
+    const userInfo = event.detail.userInfo
+    this.setData({
+      userInfo
     })
   },
 
