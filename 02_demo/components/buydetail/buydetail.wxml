@@ -1,7 +1,7 @@
 <!-- components/buydetail/buydetail.wxml -->
 <view class="cart_content">
   <view class="content_title">
-    卡通风格LOGO 设计
+    {{data.name}}
     <text class="iconfont icon-huodong1 icon_color" decode="{{true}}">&nbsp;&nbsp;</text>
     <text class="iconfont icon-huodong icon_color" />
   </view>
@@ -13,8 +13,9 @@
     <text class="iconfont icon-remen1 icon_color" />
   </view>
   <view class="content_description">
-    <text>优秀设计师</text>
-    <text>资深设计师</text>
+    <block wx:for="{{data.tag}}" wx:key="{{index}}">
+      <text>{{item}}</text>
+    </block>
   </view>
-  <view class="content_price icon_color">¥99.00</view>
+  <view class="content_price icon_color">¥{{data.price}}.00</view>
 </view>

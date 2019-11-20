@@ -10,10 +10,10 @@
   <swiper class="nav" indicator-dots circula indicator-color="#999999" indicator-active-color="#ff3b37">
     <block wx:for="{{navList}}" wx:key="{{navIndex}}" wx:for-item="nav" wx:for-index="navIndex">
       <swiper-item >
-        <view class="nav_content">
+        <view class="nav_content" capture-bind:tap="swiperPage" data-index="{{navIndex}}">
           <view class="nav_box" wx:for="{{nav}}" wx:key="{{index}}"
-                                bindtap="chooseDesign" data-index="{{index}}">
-            <image src="{{item.url}}" class="nav_img" />
+                                capture-bind:tap="chooseDesign" data-index="{{index}}">
+            <image src="{{item.picture}}" class="nav_img" />
             <text >
               {{item.name}}
             </text>
@@ -80,8 +80,9 @@
     </view>
     <!-- foot_content开始 -->
     <view class="foot_content">
-      <block wx:for="{{showTotle[showIndex]}}" wx:key="{{index}}">
-        <showbox item="{{item}}"></showbox>
+      <block wx:for="{{showTotle[currentIndex]}}" wx:key="{{index}}">
+          <showbox item="{{item}}" bind:navto="navToAnli"
+                   data-id="{{item}}"></showbox>
       </block>
     </view>
   </view>

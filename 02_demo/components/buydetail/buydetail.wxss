@@ -21,7 +21,7 @@
 }
 .content_description text {
   display: inline-block;
-  width: 128rpx;
+  padding: 2rpx 6rpx;
   height: 30rpx;
   border: 1rpx solid #9d9d9d;
   border-radius: 5rpx;

@@ -13,7 +13,8 @@
     "pages/profile_content/youhui/youhui",
     "pages/profile_content/fapiao/fapiao",
     "pages/profile_content/fenxiao/tuiguang/tuiguang",
-    "pages/profile_content/dingdan/dingdan"
+    "pages/profile_content/dingdan/dingdan",
+    "pages/index/anli/anli"
   ],
   "window": {
     "backgroundTextStyle": "light",

@@ -10,19 +10,12 @@
   </scroll-view>
   <!-- 轮播图结构 -->
   <view class="nav">
-    <swiper class="swiper" indicator-dots indicator-color="#ffffff" indicator-active-color="#ff4d41"
-            circular autoplay >
-      <block wx:for="{{navUrl}}" wx:key="{{index}}">
-        <swiper-item>
-        <image class="nav_img" src="{{item}}" mode="widthFix" />
-      </swiper-item>
-      </block>
-    </swiper>
+    <image class="nav_img" src="{{goodsData.loop_img}}" mode="widthFix" />
   </view>
   <!-- 商品详细介绍与价格 -->
   <view class="goods">
     <view class="lingquan">领券<text class="iconfont icon-jiantouzuo"/></view>
-    <buydetail></buydetail>
+    <buydetail data="{{goodsData}}"></buydetail>
     <view class="goods_zan">
       <text id="zan" class="iconfont icon-zan1"> 249</text>
     </view>
@@ -41,13 +34,13 @@
         </picker>
       </view>
       <!-- P数 -->
-      <view class="Pshu">
+      <view class="Pshu" wx:if="{{goodsData.param_desc!==null}}">
         P数<input type="number" placeholder="请输入P数" name="P数" 
                   placeholder-style="color:#cecece;font-size:24rpx"/>
       </view>
-      <view class="zhiyi">
+      <view class="zhiyi" wx:if="{{goodsData.param_desc!==null}}">
         <text id="tanhao" class="iconfont icon-zhuyi" />
-        <text> 一面为1p，一张纸有两面则为2p。p数越多单价越便宜</text>
+        <text> {{goodsData.param_desc}}</text>
       </view>
       <!-- 手机号 -->
       <view class="tel">

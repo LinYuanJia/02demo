@@ -1,11 +1,11 @@
 <!--components/showbox/showbox.wxml-->
 <!-- 首页下方展示商品的小模块 -->
-<view class="content_box">
-  <image class="content_header" src="{{item.url}}" mode="aspectFill"/>
-  <text class="contene_title">{{item.title}}</text>
+<view class="content_box" bindtap="navTo">
+  <image class="content_header" src="{{item.cover_img}}" mode="aspectFill"/>
+  <text class="contene_title">{{item.name}}</text>
   <view class="content_footer">
-    <image class="user_img" src="/imgs/touxiang.jpg"/>
-    <text >{{item.name}}</text>
+    <image class="user_img" src="{{item.designer.img}}"/>
+    <text >{{item.designer.name}}</text>
     <text class="iconfont icon-zan"> 249</text>
   </view>
 </view>

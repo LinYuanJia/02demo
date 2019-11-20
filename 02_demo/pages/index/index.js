@@ -1,6 +1,7 @@
 // pages/index/index.js
+const app = getApp();
 
-import request from "../../service/request"
+import request from "../../service/request";
 
 Page({
   /**
@@ -8,117 +9,134 @@ Page({
    */
   data: {
     // 轮播导航栏的数据
-    navList:{
-      listData1: {
-        1:{url:"../../imgs/logo.png",name:"LOGO设计"},
-        2:{url:"../../imgs/pinpai.png",name:"品牌VI设计"},
-        3:{url:"../../imgs/huace.png",name:"画册设计"},
-        4:{url:"../../imgs/wenhua.png",name:"企业文化墙"},
-        5:{url:"../../imgs/baozhuang.png",name:"包装设计"},
-        6:{url:"../../imgs/quanan.png",name:"品牌全案"},
-        7:{url:"../../imgs/zhuanmai.png",name:"专卖店设计"},
-        8:{url:"../../imgs/more.png",name:"更多"}
-      },
-      listData2:{
-        1:{url:"../../imgs/logo.png",name:"LOGO设计"},
-        2:{url:"../../imgs/pinpai.png",name:"品牌VI设计"},
-        3:{url:"../../imgs/huace.png",name:"画册设计"},
-        4:{url:"../../imgs/wenhua.png",name:"企业文化墙"},
-        5:{url:"../../imgs/baozhuang.png",name:"包装设计"},
-        6:{url:"../../imgs/quanan.png",name:"品牌全案"},
-        7:{url:"../../imgs/zhuanmai.png",name:"专卖店设计"},
-        8:{url:"../../imgs/more.png",name:"更多"}
-      }
+    navList: {
+      listData1: [],
+      listData2: [],
     },
+    page:'',
     // 中部通知content的数据
     notifyList: {
-      abc:["1333****333用户购买logo一件.....","1333****333升级为 VIP 2级....."],
-      nba:["baseline：项目的第一行文字的基线对齐","justify-content属性定义项目在主轴上的对齐方式"],
-      cba:["space-between:两端对齐","space-around：每个项目两侧的间隔相等"],
-      mba:["align-content属性定义了多根轴线的对齐方式","如果项目只有一根轴线，该属性不起作用"]
+      abc: ["1333****333用户购买logo一件.....", "1333****333升级为 VIP 2级....."],
+      nba: ["baseline：项目的第一行文字的基线对齐", "justify-content属性定义项目在主轴上的对齐方式"],
+      cba: ["space-between:两端对齐", "space-around：每个项目两侧的间隔相等"],
+      mba: ["align-content属性定义了多根轴线的对齐方式", "如果项目只有一根轴线，该属性不起作用"]
     },
     //底部导航栏三元判断的变量，selectHandle点击函数改变其值
-    currentIndex:0,
+    currentIndex: 0,
     // 底部导航栏标题
-    titleData:["推荐","VI设计","LOGO设计","企业文化墙","画册设计"],
+    titleData: ["推荐", "VI设计", "LOGO设计", "企业文化墙", "画册设计"],
     // 底部内容---变量控制bar显示
-    showIndex:"showData",
-    showTime:["showData","showData1","showData2","showData3"],
+    showIndex: "showData",
+    showTime: ["showData", "showData1", "showData2", "showData3"],
     // 数据---图片等
-    showTotle:{
-      showData:{
-        1:{url:"../../imgs/goods/01.jpg",title:"古典风格 画册设计",name:"设计师老王"},
-        2:{url:"../../imgs/goods/02.jpg",title:"古典风格 画册设计",name:"设计师tony"},
-        3:{url:"../../imgs/goods/03.jpg",title:"古典风格 画册设计",name:"设计师小张"},
-        4:{url:"../../imgs/goods/04.jpg",title:"古典风格 画册设计",name:"设计师UZI"},
-        5:{url:"../../imgs/goods/05.jpg",title:"古典风格 画册设计",name:"设计师菜鸟"},
-        6:{url:"../../imgs/goods/got08.jpg",title:"古典风格 画册设计",name:"设计师哈哈哈"}
-      },
-      showData1:{
-        2:{url:"../../imgs/goods/tu02.jpg",title:"古典风格 画册设计",name:"设计师tony"},
-        3:{url:"../../imgs/goods/tu03.jpg",title:"古典风格 画册设计",name:"设计师小张"},
-        4:{url:"../../imgs/goods/tu04.jpg",title:"古典风格 画册设计",name:"设计师UZI"},
-        5:{url:"../../imgs/goods/tu01.jpg",title:"古典风格 画册设计",name:"设计师菜鸟"},
-      },
-      showData2:{
-        6:{url:"../../imgs/goods/got01.jpg",title:"古典风格 画册设计",name:"设计师小王"},
-        7:{url:"../../imgs/goods/got07.jpg",title:"古典风格 画册设计",name:"设计师小王"},
-        1:{url:"../../imgs/goods/got02.jpg",title:"古典风格 画册设计",name:"设计师小王"},
-        2:{url:"../../imgs/goods/got03.jpg",title:"古典风格 画册设计",name:"设计师小王"}
-      },
-      showData3:{
-        4:{url:"../../imgs/goods/got05.jpg",title:"古典风格 画册设计",name:"设计师小王"},
-        5:{url:"../../imgs/goods/got06.jpg",title:"古典风格 画册设计",name:"设计师小王"}
-      }
+    showTotle: {
+      0: [],
+      1: [],
+      2: [],
+      3: [],
+      4: []
     },
 
   },
 
- /*  -------------事件监听函数 ------------*/
+  /*  -------------事件监听函数 ------------*/
 
   /* 监听下方切换栏index，改变选中样式 */
-  selectHandle(event){
+  selectHandle(event) {
     let index = event.currentTarget.dataset.index
     this.setData({
       currentIndex: index,
       showIndex: this.data.showTime[index]
     })
   },
+  /* 监听轮播图的页数 */
+  swiperPage(event){
+    const page = event.currentTarget.dataset.index
+    this.setData({
+      page
+    })
+  },
   //监听轮播导航的点击跳转页面
-  chooseDesign(event){
+  chooseDesign(event) {
     const index = event.currentTarget.dataset.index
-    console.log(index)
+    const page = this.data.page
+    const data = this.data.navList[page][index]
+    const newData = JSON.stringify(data)
     wx.navigateTo({
-      url:"../design/design_detail/design_detail?index="+`${index}`
+      url: "../design/design_detail/design_detail?index=" + `${index}`+"&data="+`${newData}`
     })
   },
 
- /* 监听国庆活动点击跳转 */
-  toTaocan(){
+  /* 监听国庆活动点击跳转 */
+  toTaocan() {
     wx.navigateTo({
       url: '../taocan/taocan',
-      success: (result)=>{
-        
+      success: (result) => {
+
       }
     });
   },
-  /* 登陆函数的抽取 */
-  _login(){
-    wx.login({
-      success: res=> {
-        const code = res.code;
+  /* 监听下方案例页面的点击，并传递数据跳转 */
+  navToAnli(option){
+    const id = option.currentTarget.dataset.id.id
+    wx.navigateTo({
+      url: '../index/anli/anli?id='+`${id}`
+    })
+  },
+  /* 商品数据请求的抽取 */
+  _getGoods(product_id){
+    wx.getStorage({
+      key: 'TOKEN',
+      success: (result)=>{
+        const token = result.data
         request({
-          url: "/user/login",
-          method: 'post',
+          url: "/example/get",
+          method: 'get',
           data: {
-            code,
+            product_id,
+          },
+          header: {
+            token,
+          }
+        }).then(res => {
+          const list = res.data.data.data
+          const nameKey = `showTotle[${product_id}]`
+          this.setData({
+          [nameKey]: list
+          })
+        })
+      }
+    })
+  },
+  /* 导航图标商品数据请求的抽取 */
+  _getNavGoods(){
+    wx.getStorage({
+      key: 'TOKEN',
+      success: (result)=>{
+        const token = result.data
+        request({
+          url: '/product/get',
+          method: 'get',
+          data: {},
+          header: {
+            token
           }
         }).then(res=>{
-          console.log(res)
-          const data = res.data.data.apitoken.token
-          wx.setStorage({
-            key: 'TOKEN',
-            data: data
+          const list = res.data.data
+          const list1 = []
+          const list2 = []
+          list.forEach((item,index)=>{   
+            if(index < 8){
+              list1.push(item)
+            }else{
+              list2.push(item)
+            }
+          })
+          const nameKey1 = `navList.listData1`
+          const nameKey2 = `navList.listData2`
+          this.setData({
+            [nameKey1]: list1,
+            [nameKey2]: list2
           })
         })
       }
@@ -126,16 +144,19 @@ Page({
   },
 
 
-
-
- /* --------------生命周期函数------------- */
+  /* --------------生命周期函数------------- */
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    this._login();
-  },
+    this._getGoods(0);
+    this._getGoods(1);
+    this._getGoods(2);
+    this._getGoods(3);
+    this._getGoods(4);
+    this._getNavGoods();
 
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

@@ -1,0 +1,7 @@
+<!--pages/index/anli/anli.wxml-->
+<view class="container">
+  <view class="head">
+    <image class="head_img" src="{{totleData.cover_img}}" />
+  </view>
+
+</view>

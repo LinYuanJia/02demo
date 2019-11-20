@@ -5,12 +5,12 @@ Page({
    * 页面的初始数据
    */
   data: {
+    /* 页面商品的全部数据 */
+    goodsData:{},
     /* 头部切换栏标题数据 */
-    headBar:["LOGO设计","品牌VI设计","画册设计","企业文化墙","包装设计","品牌全案","专卖店设计"],
+    headBar:["LOGO设计","品牌VI设计","画册设计","网站设计","包装设计","企业文化墙","商业空间设计"],
     // 头部切换栏，样式切换事件index保存
     currentIndex:2,
-    //轮播图图片数据
-    navUrl:["/imgs/goods/01.jpg","/imgs/goods/02.jpg","/imgs/goods/05.jpg"],
     //picker组件的列表显示数据
     multiData:["A3","A4","A5","B3","B5"],
     //规格input中的value存储
@@ -81,10 +81,14 @@ Page({
    */
   onLoad: function (options) {
     //设置切换栏和首页点击的模块一致
-    const index = options.index-1
+    const data = JSON.parse(options.data)
+    data.tag = data.tag.split(",")
+    const index = options.index
     this.setData({
-      currentIndex: index
+      currentIndex: index,
+      goodsData: data
     })
+    console.log(this.data.goodsData)
   },
 
   /**
