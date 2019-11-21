@@ -1,0 +1,13 @@
+<!--pages/profile_content/fankui/fabkui.wxml-->
+<view class="container">
+  <form bindsubmit="formSubmit">
+    <textarea class="content" name="fankui"
+              placeholder="请输入反馈内容，我们会为您更好的服务"
+              value="{{value}}"></textarea>
+      <view class="imgBox">
+        <image class="sub_img" src="/imgs/fankui_img.png" />
+        <button class="choose_img" bindtap="chooseImage">选择图片</button>
+      </view>
+    <button class="" type="primary" form-type="submit">提交反馈</button>
+  </form>
+</view>

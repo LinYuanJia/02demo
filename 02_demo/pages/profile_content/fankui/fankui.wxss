@@ -1,0 +1,38 @@
+/* pages/profile_content/fankui/fabkui.wxss */
+page {
+  background-color: #f4f3f8;
+}
+.content {
+  box-sizing: border-box;
+  padding: 20rpx;
+  margin: 20rpx;
+  width: 710rpx;
+  height: 400rpx;
+  background-color: #ffffff;
+  border-radius: 20rpx;
+}
+.imgBox {
+  position: absolute;
+  top: 180rpx;
+  left: 60rpx;
+  width: 190rpx;
+  height: 190rpx;
+}
+.sub_img {
+  width: 190rpx;
+  height: 190rpx;
+}
+.imgBox .choose_img {
+  position: absolute;
+  top: 130rpx;
+  left: 30rpx;
+  padding: 0;
+  margin: 0;
+  min-width: 10rpx;
+  width: 120rpx;
+  min-height: 10rpx;
+  height: 40rpx;
+  border: 1rpx solid #000000;
+  font-size: 24rpx;
+  z-index: 2;
+}

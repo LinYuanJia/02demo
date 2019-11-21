@@ -60,7 +60,7 @@ Page({
       "/pages/profile_content/youhui/youhui",
       "/pages/profile_content/fapiao/fapiao",
       "/pages/profile_content/shoucang/shoucang",
-      "/pages/profile_content/fankui/fabkui"
+      "/pages/profile_content/fankui/fankui"
     ]
 
   },
@@ -81,34 +81,38 @@ Page({
       url
     })
   },
-  /* 获取用户信息并展示 */
+  /* 获取用户信息并修改 */
   getUserInfo(event) {
     const info = event.detail.userInfo
-    console.log(info)
-    wx.getStorage({
-      key: 'TOKEN',
+    wx.setStorage({
+      key: 'DATA',
+      data: info,
       success: (result)=>{
-        const token = result.data
-        request({
-          url: "/user/updateinfo",
-          method: 'post',
-          data: {
-            nickName: info.nickName,
-            avatarUrl: info.avatarUrl,
-            country: info.country,
-            gender: 1,
-            language: info.language,
-            city: '',
-            province: ''
-          },
-          header: {
-            token,
+        wx.getStorage({
+          key: 'TOKEN',
+          success: (result)=>{
+            const token = result.data
+            wx.getStorage({
+              key: 'DATA',
+              success: (result)=>{
+                const data = result.data
+                console.log(data)
+                request({
+                  url: "/user/updateinfo",
+                  method: 'post',
+                  data: data,
+                  header: {
+                    token,
+                  }
+                }).then(res=>{
+                  console.log(res)
+                })
+              }
+            })
           }
-        }).then(res=>{
-          console.log(res)
         })
       }
-    })
+    })  
   },
 
 
@@ -119,24 +123,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    wx.getStorage({
-      key: 'TOKEN',
-      success: (result)=>{
-        const token = result.data
-        request({
-          url: "/example/info?example_id=1",
-          method: 'get',
-          data: {
-            example_id: 4
-          },
-          header: {
-            token
-          }
-        }).then(res=>{
-          console.log(res)
-        })
-      }
-    })
+    
   },
 
   /**

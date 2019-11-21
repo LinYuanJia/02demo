@@ -175,3 +175,21 @@ page {
   width: 95%; 
   height: 1100rpx;
 }
+.search_result {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.search_result .backToIndex {
+  position: fixed;
+  bottom: 40rpx;
+  right: 40rpx;
+  margin: 0;
+  padding: 0;
+  width: 120rpx;
+  line-height: 80rpx;
+  background-color: #fc4235;
+  color: #fcfcfc;
+  border: 4rpx solid #696868;
+}

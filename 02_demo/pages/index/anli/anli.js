@@ -7,9 +7,27 @@ Page({
    * 页面的初始数据
    */
   data: {
-    totleData:{}
+    totleData: {},
+    barList: ["案例相关图片","设计师简介"],
+    footCont: false
 
   },
+
+  /* ----------------事件监听函数------------------*/
+  /* 监听切换栏的index改变，决定下方展示内容 */
+  changeFooter(event){
+    const index = event.detail.index
+    if(index==0){
+      this.setData({
+        footCont: false
+      })
+    }else{
+      this.setData({
+        footCont: true
+      })
+    }
+  },
+  
 
   /**
    * 生命周期函数--监听页面加载
@@ -34,10 +52,9 @@ Page({
           this.setData({
             totleData: data
           })
-          console.log(this.data.totleData)
         })
       }
-    })  
+    })
   },
 
   /**

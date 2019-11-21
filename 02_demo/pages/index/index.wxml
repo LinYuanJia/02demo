@@ -1,22 +1,19 @@
 <!-- pages/index/index.wxml -->
-<view class="container">
+<view class="container" hidden="{{searchIndex}}">
   <!-- 头部搜索 -->
   <view class="head">
     <image src="../../imgs/touxiang.jpg" class="head_img" />
-    <input type="text" placeholder="画册设计"/>
+    <input type="text" placeholder="画册设计" bindconfirm="searchHandle" value="{{searchValue}}"/>
     <text class="iconfont icon-sousuo head_search"></text>
   </view>
   <!-- 中部轮播导航 -->
   <swiper class="nav" indicator-dots circula indicator-color="#999999" indicator-active-color="#ff3b37">
     <block wx:for="{{navList}}" wx:key="{{navIndex}}" wx:for-item="nav" wx:for-index="navIndex">
-      <swiper-item >
+      <swiper-item>
         <view class="nav_content" capture-bind:tap="swiperPage" data-index="{{navIndex}}">
-          <view class="nav_box" wx:for="{{nav}}" wx:key="{{index}}"
-                                capture-bind:tap="chooseDesign" data-index="{{index}}">
+          <view class="nav_box" wx:for="{{nav}}" wx:key="{{index}}" capture-bind:tap="chooseDesign" data-index="{{index}}">
             <image src="{{item.picture}}" class="nav_img" />
-            <text >
-              {{item.name}}
-            </text>
+            <text>{{item.name}}</text>
           </view>
         </view>
       </swiper-item>
@@ -71,9 +68,7 @@
     <!-- foot_bar开始 -->
     <view class="foot_bar">
       <block wx:for="{{titleData}}" wx:key="{{index}}">
-        <view class="footBar_box {{currentIndex==index?'active':''}}"
-            data-index="{{index}}"
-            bind:tap="selectHandle">
+        <view class="footBar_box {{currentIndex==index?'active':''}}" data-index="{{index}}" bind:tap="selectHandle">
           <text>{{item}}</text>
         </view>
       </block>
@@ -81,9 +76,14 @@
     <!-- foot_content开始 -->
     <view class="foot_content">
       <block wx:for="{{showTotle[currentIndex]}}" wx:key="{{index}}">
-          <showbox item="{{item}}" bind:navto="navToAnli"
-                   data-id="{{item}}"></showbox>
+        <showbox item="{{item}}" bind:navto="navToAnli" data-id="{{item}}"></showbox>
       </block>
     </view>
   </view>
+</view>
+<view class="search_result" hidden="{{!searchIndex}}">
+  <block wx:for="{{searchData}}" wx:key="{{index}}">
+    <showbox item="{{item}}" bind:navto="navToAnli" data-id="{{item}}"></showbox>
+  </block>
+  <button class="backToIndex" bindtap="backToIndex">取消</button>
 </view>

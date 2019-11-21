@@ -8,6 +8,10 @@ Page({
    * 页面的初始数据
    */
   data: {
+    /* 搜索框内容的显示与隐藏 */
+    searchIndex: false,
+    searchData:[],
+    searchValue: '',
     // 轮播导航栏的数据
     navList: {
       listData1: [],
@@ -40,7 +44,43 @@ Page({
   },
 
   /*  -------------事件监听函数 ------------*/
-
+  /* 监听搜索框提交内容 */
+  searchHandle(event){
+    const val = event.detail.value
+    new Promise((resolve,reject)=>{
+      wx.getStorage({
+        key: 'TOKEN',
+        success: res=>{
+          resolve(res)
+        }
+      })
+    }).then(res=>{
+      const token = res.data
+      return request({
+        url: "/example/search?val=天",
+        method: 'get',
+        data: {
+          val
+        },
+        header: {
+          token
+        }
+      })
+    }).then(res=>{
+      const data = res.data.data.data
+      this.setData({
+        searchIndex: true,
+        searchData: data
+      })
+    })
+  },
+  /* 搜索内容隐藏，返回首页 */
+  backToIndex(){
+    this.setData({
+      searchIndex: false,
+      searchValue: ''
+    })
+  },
   /* 监听下方切换栏index，改变选中样式 */
   selectHandle(event) {
     let index = event.currentTarget.dataset.index

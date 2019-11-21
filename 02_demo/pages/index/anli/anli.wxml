@@ -1,7 +1,48 @@
 <!--pages/index/anli/anli.wxml-->
 <view class="container">
   <view class="head">
-    <image class="head_img" src="{{totleData.cover_img}}" />
+    <image class="head_img" src="{{totleData.cover_img}}" mode="aspectFill" />
   </view>
-
+  <!-- 中部详细介绍 -->
+  <view class="body">
+    <view class="body_head">{{totleData.name}}</view>
+    <view class="body_name">
+      <image class="body_img" src="{{totleData.designer.img}}" />
+      <text>{{totleData.designer.name}}</text>
+      <text class="body_date">{{totleData.craete_time}}</text>
+    </view>
+    <view class="body_content">
+      <text>{{totleData.content}}</text>
+    </view>
+  </view>
+  <!-- 下方案例展示和设计师简介 -->
+  <view class="footer">
+    <!-- 上方切换栏 -->
+    <tabbar barList="{{barList}}" bind:indexChange="changeFooter"></tabbar>
+    <!-- 下方内容 -->
+    <!-- 案例图片 -->
+    <view class="example" hidden="{{footCont}}">
+      <block wx:for="{{totleData.product_example_img}}" wx:key="{{index}}">
+        <view class="example_box">
+          <image class="example_img" src="{{item.url}}" mode="aspectFill" />
+          <text>{{item.name}}</text>
+        </view>
+      </block>
+    </view>
+    <!-- 设计师 -->
+    <view class="designer" hidden="{{!footCont}}">
+      <view class="designer_head">
+        <image class="designer_img" src="{{totleData.designer.img}}" />
+        <text class="designer_name">{{totleData.designer.name}}</text>
+        <text>{{totleData.designer.qualifications}}</text>
+      </view>
+      <view class="designer_message">
+        <text>擅长： {{totleData.designer.adept}}</text>
+        <text>从业年限： {{totleData.designer.year}}年</text>
+      </view>
+      <view class="designer_motto">
+        人生格言： {{totleData.designer.motto}}
+      </view>
+    </view>
+  </view>
 </view>

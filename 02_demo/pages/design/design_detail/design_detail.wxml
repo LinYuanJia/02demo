@@ -10,7 +10,7 @@
   </scroll-view>
   <!-- 轮播图结构 -->
   <view class="nav">
-    <image class="nav_img" src="{{goodsData.loop_img}}" mode="widthFix" />
+    <image class="nav_img" src="{{goodsData.loop_img}}" mode="aspectFill" />
   </view>
   <!-- 商品详细介绍与价格 -->
   <view class="goods">

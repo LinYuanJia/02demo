@@ -1,1 +1,96 @@
 /* pages/index/anli/anli.wxss */
+.head_img {
+  width: 750rpx;
+  height: 480rpx;
+}
+.body {
+  box-sizing: border-box;
+  padding: 20rpx 30rpx;
+  width: 100%;
+}
+.body_head {
+  font-size: 36rpx;
+  color: #333333;
+}
+.body_name {
+  display: flex;
+  align-items: center;
+  margin-top: 10rpx;
+  font-size: 28rpx;
+  color: #333333;
+}
+.body_name .body_img {
+  margin-right: 10rpx;
+  width: 50rpx;
+  height: 50rpx;
+  border-radius: 50%;
+}
+.body_name .body_date {
+  margin-left: 10rpx;
+  font-size: 20rpx;
+  color: #999999;
+}
+.body_content {
+  margin-top: 10rpx;
+  width: 100%;
+  font-size: 24rpx;
+  color: #333333;
+}
+.example {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  width: 750rpx;
+  height: 700rpx;
+}
+.example_box {
+  width: 330rpx;
+  height: 330rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  font-size: 28rpx;
+  color: #666666;
+}
+.example_box .example_img {
+  width: 330rpx;
+  height: 250rpx;
+  border-radius: 20rpx 20rpx 0 0;
+}
+.designer {
+  box-sizing: border-box;
+  padding: 0 30rpx;
+  width: 750rpx;
+  height: 690rpx;
+}
+.designer_head {
+  display: flex;
+  align-items: center;
+  margin-top: 10rpx;
+  width: 690rpx;
+  font-size: 28rpx;
+  color: #333333;
+}
+.designer_head .designer_img {
+  margin-right: 10rpx;
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+}
+.designer_head .designer_name {
+  width: 60%;
+}
+.designer_message {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10rpx;
+  width: 100%;
+  font-size: 24rpx;
+  color: #666666;
+}
+.designer_motto {
+  margin-top: 10rpx;
+  font-size: 24rpx;
+  color: #666666;
+}

@@ -48,7 +48,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 5,
+			"current": 4,
 			"list": [
 				{
 					"id": -1,
@@ -73,13 +73,6 @@
 				},
 				{
 					"id": -1,
-					"name": "商品详情",
-					"pathName": "pages/design/design_detail/design_detail",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
 					"name": "全部订单",
 					"pathName": "pages/profile_content/dingdan/dingdan",
 					"query": "",
@@ -87,8 +80,9 @@
 				},
 				{
 					"id": -1,
-					"name": "案例详情",
-					"pathName": "pages/index/anli/anli",
+					"name": "意见反馈",
+					"pathName": "pages/profile_content/fankui/fankui",
+					"query": "",
 					"scene": null
 				}
 			]
